@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% 	load staticfiles %}
+<html>
+	<head>
+		<title>hr</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static "CSS/style.css" %}"/>
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div><h1>Sign Up Form </h1></div>
+
+
+<form method="GET">
+	<div class="form-row">
+	<div class="form-group col-md-3">
+	<label for = "formalname">Formal Name</label>
+	<input type="text" class="form-control" id = "formalname" name="formalname">
+	</div>
+	<div class="form-group col-md-2">
+	<label for = "nickname">Nick Name</label>
+	<input type="text" class="form-control" id = "nickname" name="nickname">
+	</div>
+	<div class="form-group col-md-3">
+	<label for = "fathername">Fother's Name</label>
+	<input type="text" class="form-control" id = "fathername" name="fathername">
+	</div>
+	<div class="form-group col-md-3">
+	<label for = "mothername">Mother's Name</label>
+	<input type="text" class="form-control" id = "mothername" name="mothername">
+	</div>
+	<div class="form-group col-md-2">
+	<label for = "contactnumber">Contact Number</label>
+	<input type="text" class="form-control" id="contactnumber" name="contactnumber" required>
+	</div>
+	<div class="form-group col-md-2">
+	<label for = "birthday">Date of Birth</label>
+	<input type="Date" class="form-control" id="birthday" name="birthday" required>
+	</div>
+
+	<div class="form-group col-md-1">
+		<label for = "gender">Gender</label>
+
+		<div class="form-check">
+		<input class="form-check-input" type="radio" name="gender" id="gender" value="male" >
+		<label class="form-check-label" for="gender">Male</label>
+		</div>
+		<div class="form-check">
+		<input class="form-check-input" type="radio" name="gender" id="gender" value="female" >
+		<label class="form-check-label" for="gender">Female</label>
+		</div>
+		<div class="form-check">
+		<input class="form-check-input" type="radio" name="gender" id="gender" value="other">
+		<label class="form-check-label" for="gender">Other</label>
+		</div>
+	</div>
+
+	<div class="form-group col-md-1">
+	<label for = "religion">Religion</label>
+	<div class="form-check">
+	<input class="form-check-input" type="radio" name="religion" id="religion" value="islam">
+	<label class="form-check-label" for="religion">Islam</label>
+	</div>
+	<div class="form-check">
+	<input class="form-check-input" type="radio" name="religion" id="religion" value="hindu">
+	<label class="form-check-label" for="religion">Hindu</label>
+	</div>
+	<div class="form-check">
+	<input class="form-check-input" type="radio" name="religion" id="religion" value="other">
+	<label class="form-check-label" for="religion">Other</label>
+	</div>
+	</div>
+</div>
+
+
+<div class="form">
+	<div class="form-group col-md-3">
+	<label for="email">Email</label>
+	<input type="email" class="form-control" id="email" required>
+	</div>
+	<div class="form-group col-md-3">
+	<label for="password">Password</label>
+	<input type="password" class="form-control" id="password" minlength="8">
+	</div>
+</div>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="division">Division</label>
+      <select id="division" class="form-control">
+        <option selected>Choose...</option>
+        <option>Dhaka</option>
+        <option>Rangpur</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="district">District</label>
+      <select id="district" class="form-control">
+        <option selected>Choose...</option>
+        <option>Dhaka</option>
+        <option>Kurigram</option>
+        <option>Gazipur</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="upazila">Upzila</label>
+      <select id="upazila" class="form-control">
+        <option selected>Choose...</option>
+        <option>.....</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="postoffice">Post Office</label>
+      <select id="postoffice" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="village">Village</label>
+      <select id="village" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+        <div class="form-group col-md-2">
+      <label for="housenumber">House Number</label>
+      <input type="text" name="housenumber" class="form-control">
+    </div>
+    </div>
+
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="siblings">
+      <label class="form-check-label" for="gridCheck">
+        Siblings
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="reset" class="btn btn-primary">Reset</button><br><br>
+</form>
+
+
+
+
+
+<!-- 				Siblings: <input type="Number" name="siblings"><br>
+				Number of Male Siblings: <input type="Number" name="malesiblings"> <br>
+				Number of Female Siblings: <input type="Number" name="femalesiblings"><br> -->
+
+		</header>
+
+
+
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	</body>
+</html>

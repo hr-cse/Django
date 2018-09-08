@@ -1,0 +1,9 @@
+body{
+	margin-left: 15px;
+	background: linear-gradient(to right, rgb(40, 164, 130), rgb(152, 189, 102)); 
+
+}
+h1{
+	padding: 50px 0px 50px 0px;
+	color: white;
+}

@@ -1,0 +1,1 @@
+1.conda create --name djangoenv django

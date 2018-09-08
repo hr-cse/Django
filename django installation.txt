@@ -1,1 +1,17 @@
-1.conda create --name djangoenv django
+1. create environment:
+	(i)-conda create --name djangoenv django
+	or if select specific version of python then
+	-conda create --name djangoenv python = 3.6/3.6/3.7 
+2. check:
+	-conda info --envs
+3. activate:
+	-activate djangoenv
+4. install django:
+	-conda install django (i = No need)
+------------part 2----------
+1.create directory
+2.cd directory
+3.activate django environment
+4.-django-admin startproject first_project
+5.-cd first_project
+6.-python manage.py runserver

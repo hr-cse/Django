@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <title>Human+Relationship</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+  <body id = "body">
+    <header>
+      <div id="login_form" class="login" style="display: none;">
+          <!-- <p id = "close" >close</p> -->
+          <button id = "closelogin" type="button">close</button>
+          <input type="text" placeholder="username" name="user"><br>
+          <input type="password" placeholder="password" name="password"><br>
+          <a href = "{% url 'relation:home' %}"><input type="button" value="Login" ></a>
+      </div>
+
+      <div id="signup_form" class="login" style="display: none;">
+          <button id = "closesignup" type="button" >close</button>
+          <input type="text" placeholder="username" name="user"><br>
+          <input type="password" placeholder="password" name="password"><br>
+          <a href = "{% url 'relation:home' %}"><input type="button" value="sign up"></a>
+      </div>
+      
+      <div class="hero" id="signin_signup">
+        <!-- <h1>Human Relationship</h1> -->
+        <div class="button">
+          <!-- <a href="" class="btn btn_one">Log In</a> -->
+          <button class="btn btn_one" id = "btn_login" >Log In</button>
+          <button class="btn btn_one" id = "btn_signup">Sign Up</button>
+        </div>
+      </div>
+    </header>
+    <script type="text/javascript" src="{% static "script.js" %}"></script>
+  </body>
+</html>

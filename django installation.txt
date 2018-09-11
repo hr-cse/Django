@@ -18,3 +18,41 @@
 
 ------------part 3-----------
 1.-django-admin startapp appName
+2.setup appName in settings.py
+
+
+------------model ----------
+	create diffrent class model in to app->models.py file
+1. -python manage.py migrate
+2. -python manage.py makemigrations appName
+3. again -python manage.py migrate
+		--check database--
+		1. python manage.py shell
+		2. import appName.models import databas(Topic)
+		3. print(Topic.objects.all())
+		4.t = Topic(top_name = "social network")
+		5.t.save()
+		6.print(Topic.objects.all())
+		7.Quit()
+4.app->admin.py 
+	1.register all model
+		- from appname.models import model1,model2...
+		-admin.site.register(modelName)
+5. create super user
+	1.python manage.py createsuperuser
+6.-python manage.py runserver
+	127.0.0.1:8000/admin
+
+-------------retrieve data form database--------
+1. view.py
+	1.- from appname.models import model1,model2...
+	2.def user(request):
+		user_list = userInfo.objects.order_by('firstName')
+		user_dic = {'users':user_list}
+		return render(request,'user.html',context=user_list)
+
+		
+		
+		
+------------- Form-------------------
+1.create forms.py into app.

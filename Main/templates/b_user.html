@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<h2>User Page.</h2>
+<div>
+		{% if users %}
+			<ol>
+				{% for user in users %}
+				<ul>
+					<li>First Name: {{ user.firstName }}</li>
+					<li>Last Name: {{ user.lastName }}</li>
+					<li>Email: {{ user.email }}</li>
+				</ul>
+				{% endfor %}
+			</ol>
+		{% else %}
+			<p>error!</p>
+		{% endif %}
+
+	</div>
+</body>
+</html>

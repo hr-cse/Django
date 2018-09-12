@@ -61,3 +61,44 @@
 
 --create automatic form using model--
 1.
+
+
+
+---------template customization-----
+1.use comon template:
+	1.create base
+		-{% block body_block %}
+		-{% endblock %}
+	2.inherit base template 
+		-<!DOCTYPE html>
+		{% extends "base.html" %}
+		{% block body_block %}
+			child template code here
+			................
+			................
+		{% endblock %}
+	
+2.relative url template:
+	-<a class="nav-item nav-link" href="{% url "appName:pageName(urls.py ->name="pageName"") %}">Admin</a>
+	
+3.main template and relative :(project urls.py)
+	-from django.conf.urls import url,include
+	-url(r'^$',views.index,name='index')
+    -url(r'',include('learnmodelform.urls'))
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

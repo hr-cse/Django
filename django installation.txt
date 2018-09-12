@@ -88,15 +88,28 @@
 	
 	
 	
+------------costome filter------
+django part 4 er video
+
+
+-------- learning user ----
+password:
+	1.pip install bcrypt(project same directory)
+	2.pip install django[argon2]
+	3.settings.py:
+		# Application definition
+		# Password validation
+			PASSWORD_HASHERS = [
+			'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+			'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+			'django.contrib.auth.hashers.Argon2PasswordHasher',
+			'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+			'django.contrib.auth.hashers.BCryptPasswordHasher',
+			]   (django docs)
 	
 	
-	
-	
-	
-	
-	
-	
-	
+for image:
+	-pip install pillow
 	
 	
 	

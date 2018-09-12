@@ -56,3 +56,8 @@
 		
 ------------- Form-------------------
 1.create forms.py into app.
+2. views.py ->
+	edit function corresponding html template
+
+--create automatic form using model--
+1.

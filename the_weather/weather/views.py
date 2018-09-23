@@ -1,8 +1,20 @@
 from django.shortcuts import render
 import requests
-url = 'https://samples.openweathermap.org/data/2.5/weather?q={},uk&appid=b6907d289e10d714a6e88b30761fae22'
-r = requests.get(url.format("Dhaka")).json()
+
 
 
 def index(request):
-    return render(request, 'weather/weather.html')
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=0cf53fc17073afb3f22fd263aea3a466'
+    city = "Gazipur"
+    r = requests.get(url.format(city)).json()
+    city_weather = {
+        'city' : city,
+        'temperature' : r['main']['temp'],
+        'description' : r['weather'][0]['description'],
+        'icon' : r['weather'][0]['icon'],
+    }
+    context = {
+        'city_weather' : city_weather
+    }
+
+    return render(request, 'weather/weather.html', context)

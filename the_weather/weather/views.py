@@ -1,11 +1,21 @@
 from django.shortcuts import render
 import requests
 from .models import City
+from .forms import CityForm
 
 
 
 def index(request):
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=0cf53fc17073afb3f22fd263aea3a466'
+# Sava DB
+    if request.method == 'POST':
+        form = CityForm(request.POST)
+        form.save()
+
+# show form html
+    form = CityForm()
+
+    # retrive DB
     cities = City.objects.all()
     weather_data = []
     for city in cities:
@@ -19,7 +29,8 @@ def index(request):
         }
         weather_data.append(city_weather)
     context = {
-        'weather_data' : weather_data
+        'weather_data' : weather_data,
+        'form' : form
     }
 
     return render(request, 'weather/weather.html', context)

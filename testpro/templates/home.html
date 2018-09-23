@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block body_block %}
+    <div class="mainbody">
+		{% if access_records %}
+            {% for i in access_records %}
+                {% if i.phone == loginnumberHome %}
+                    <div class="dropdown">
+                        <button class="dropbtn" id="m1">{{ i.userName }}</button>
+                    </div>
+                    <br>
+                    <div class="dropdown">
+                        <button class="dropbtn">+</button>
+                        <div class="dropdown-content" >
+                            <form method="POST" action="">
+                                <select>
+                                    <option>Select Person</option>
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Brother</option>
+                                    <option>Sister</option>
+                                    <option>Son</option>
+                                    <option>Daughter</option>
+                                    <option>Wife</option>
+                                </select>
+                              <input type="text" placeholder="name" name="user"><br>
+                              <input type="text" placeholder="phone" name="phone"><br>
+                              <input type="button" value="Add" >
+                            </form>
+                          </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+		{% else %}
+			<p>error!</p>
+		{% endif %}
+	</div>
+
+
+
+
+
+{% endblock %}

@@ -28,7 +28,7 @@
 3. again -python manage.py migrate
 		--check database--
 		1. python manage.py shell
-		2. import appName.models import databas(Topic)
+		2. import appName.models import database(Topic)
 		3. print(Topic.objects.all())
 		4.t = Topic(top_name = "social network")
 		5.t.save()

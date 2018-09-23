@@ -1,0 +1,17 @@
+<div class="jumbotron">
+	<h1>Please Login</h1>
+	<form action="{% url 'relation:user_login' %}" method="POST">
+		{% csrf_token %}
+		<div class="form-row">
+			<div class="col">
+				<label for="contactnumber">contactnumber:</label>
+				<input type="text" class="form-control" name="contactnumber" placeholder="Enter contactnumber">
+			</div>
+			<div class="col">
+				<label for="password">Password:</label>
+				<input class="form-control" type="password" name="password">
+			</div>
+		</div>
+		<input class="btn btn-primary" type="submit" name="" value="Login">	
+	</form>	
+</div>
